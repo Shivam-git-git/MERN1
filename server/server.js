@@ -23,7 +23,7 @@ dotenv.config({path:__dirname+'/.env'});
 
 const URI = process.env.MONGODB_URL;
 
-mongoose.connect("mongodb+srv://shivam:Te03GXS4PvfEio1X@cluster0.xz4a32v.mongodb.net/merndb?retryWrites=true&w=majority", (err) => {
+mongoose.connect(URI, (err) => {
   if (err) console.log(err);
   else console.log("MongoDB: Connection Successful");
 });
