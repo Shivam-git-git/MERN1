@@ -46,7 +46,7 @@ function HomeBody() {
       password: password,
     };
 
-    fetch("https://mern-1-server.vercel.app/", {
+    fetch("https://mern-1-server.vercel.app", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(oldPerson),
