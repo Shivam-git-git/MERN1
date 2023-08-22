@@ -46,7 +46,7 @@ function HomeBody() {
       password: password,
     };
 
-    fetch("http://localhost:5000", {
+    fetch("http://localhost:5000/", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(oldPerson),
