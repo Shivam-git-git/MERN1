@@ -46,7 +46,7 @@ function HomeBody() {
       password: password,
     };
 
-    fetch("https://mern-1-server.vercel.app", {
+    fetch("http://localhost:5000", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(oldPerson),
@@ -105,7 +105,7 @@ function HomeBody() {
 
         <form
           className="homeContainer-form"
-          action="https://mern-1-server.vercel.app/signup"
+          action="http://localhost:5000/signup"
           method="post"
           onSubmit={handleSubmit}
         >

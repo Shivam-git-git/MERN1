@@ -101,7 +101,7 @@ function Comment(props) {
       <div className="parent-flex-introduction">
         <img
           className="tweet-avatar"
-          src={`https://mern-1-server.vercel.app/images/${props.body.postedBy.avatar}`}
+          src={`http://localhost:5000/images/${props.body.postedBy.avatar}`}
         ></img>
         <Link to={`/profile/${props.body.postedBy.username}`}>
           <div style={{ marginBottom: "5px" }} className="flex-introduction">
@@ -126,7 +126,7 @@ function Comment(props) {
               <li>
                 <form
                   onSubmit={deleteComment}
-                  action={`https://mern-1-server.vercel.app/deleteComment/${commentId}`}
+                  action={`http://localhost:5000/deleteComment/${commentId}`}
                   style={{ marginBottom: "0", color: "#F75D59" }}
                 >
                   <button className="delete-btn">
@@ -150,7 +150,7 @@ function Comment(props) {
                       onSubmit={(e) => {
                         editComment(e);
                       }}
-                      action={`https://mern-1-server.vercel.app/editComment/${commentId}`}
+                      action={`http://localhost:5000/editComment/${commentId}`}
                     >
                       <input
                         required
@@ -191,7 +191,7 @@ function Comment(props) {
             onSubmit={handleSubmit}
             style={{ marginBottom: "0" }}
             className="likeForm"
-            action={`https://mern-1-server.vercel.app/comment/${props.user}/like/${commentId}`}
+            action={`http://localhost:5000/comment/${props.user}/like/${commentId}`}
             method="post"
           >
             <button>
