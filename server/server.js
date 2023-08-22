@@ -28,6 +28,19 @@ mongoose.connect(URI, (err) => {
   else console.log("MongoDB: Connection Successful");
 });
 
+app.use(cors(
+  {
+    origin: ["https://mern-1-frontend.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
+
+app.get('/', (req, res) => {
+  res.json("Server is On....");
+})
+
+
 //sign in
 app.post("/", (req, res) => {
   const userLogin = req.body;
@@ -73,6 +86,8 @@ app.post("/signup", async (req, res) => {
     return res.json({ status: "ok" });
   }
 });
+
+
 
 //feed
 app.get("/feed", async (req, res) => {
