@@ -8,7 +8,7 @@ function Usercard(props) {
         <div className="card-img">
           <img
             className="tweet-avatar"
-            src={`https://mern-1-server.vercel.app/images/${props.avatar}`}
+            src={`http://localhost:5000/images/${props.avatar}`}
           ></img>
         </div>
         <div className="card-text">

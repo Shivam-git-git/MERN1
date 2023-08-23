@@ -31,7 +31,7 @@ function Sidebar() {
   };
 
   async function populateUser() {
-    const req = await fetch("https://mern-1-server.vercel.app/feed", {
+    const req = await fetch("http://localhost:5000/feed", {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
@@ -140,7 +140,7 @@ function Sidebar() {
                 }}
                 method="post"
                 encType="multipart/form-data"
-                action="https://mern-1-server.vercel.app/feed"
+                action="http://localhost:5000/feed"
                 className="tweet-form"
                 id="form1"
               >

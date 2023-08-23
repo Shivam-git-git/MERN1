@@ -23,7 +23,7 @@ function Feed() {
   const checkInput = input || img;
 
   async function populateTweets() {
-    const req = await fetch("https://mern-1-server.vercel.app/feed", {
+    const req = await fetch("http://localhost:5000/feed", {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
@@ -43,7 +43,7 @@ function Feed() {
 
   async function addTweets(e) {
     e.preventDefault();
-    const req = await fetch(`https://mern-1-server.vercel.app/feed?t=${tweetCount}`, {
+    const req = await fetch(`http://localhost:5000/feed?t=${tweetCount}`, {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
@@ -132,14 +132,14 @@ function Feed() {
         <img
           className="tweet-avatar"
           style={{ marginBottom: "0" }}
-          src={`https://mern-1-server.vercel.app/images/${userAvatar}`}
+          src={`http://localhost:5000/images/${userAvatar}`}
         ></img>
 
         <form
           onSubmit={handleSubmit}
           method="post"
           encType="multipart/form-data"
-          action="https://mern-1-server.vercel.app/feed"
+          action="http://localhost:5000/feed"
           className="tweet-form"
           id="form"
         >

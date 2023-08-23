@@ -30,7 +30,7 @@ function SearchArea() {
         className="search-form"
         onSubmit={handleSubmit}
         method="GET"
-        action={`https://mern-1-server.vercel.app/search/${text}`}
+        action={`http://localhost:5000/search/${text}`}
       >
         <input
           autoFocus
